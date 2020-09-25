@@ -120,13 +120,13 @@ exports.bankdata = (req, res) => {
   var url="https://uat.nsenmf.com/NMFIIService/NMFService/Bank?BrokerCode=ARN-21399&Appln_Id=MFS21399&Password=Account@2121";
   //curl.get(url, options, function(err, response, body) {});
 
-  curl(url, function(err) {
-    console.info(this.status);
-    console.info('-----');
-    console.info(this.body);
-    console.info('-----');
-    console.info(this.info('SIZE_DOWNLOAD'));
-  });
+  // curl(url, function(err) {
+  //   console.info(this.status);
+  //   console.info('-----');
+  //   console.info(this.body);
+  //   console.info('-----');
+  //   console.info(this.info('SIZE_DOWNLOAD'));
+  // });
 
   var data2={mse:"Teskdsl",nseurl:url};
   // data['url']=url;
