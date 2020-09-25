@@ -124,7 +124,7 @@ exports.bankdata = (req, res) => {
   // data['body']='body';
   // data['response']='response';
 
-  res.send({ message: `All Customers were deleted successfully!11` },data2);
+  res.send(data2);
 
 
 };
