@@ -1,4 +1,4 @@
-const Master = require("../models/bank.model.js");
+const Bank = require("../models/bank.model.js");
 
 // Create and Save a new Customer
 exports.bank = (req, res) => {
@@ -14,7 +14,4 @@ exports.bank = (req, res) => {
 exports.findAll = (req, res) => {
   data['asdfasdf','sdfasdf','sdfasdf'];
   res.send(data);
-};
-
- 
-  
+};  
