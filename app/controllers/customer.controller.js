@@ -1,5 +1,5 @@
 const Customer = require("../models/customer.model.js");
-//var curl = require("curl.js");
+var curl = require("curl.js");
 // Create and Save a new Customer
 exports.create = (req, res) => {
   // Validate request
@@ -118,7 +118,7 @@ exports.deleteAll = (req, res) => {
 // Retrieve all Customers from the database.
 exports.bankdata = (req, res) => {
   var url="https://uat.nsenmf.com/NMFIIService/NMFService/Bank?BrokerCode=ARN-21399&Appln_Id=MFS21399&Password=Account@2121";
-  // //curl.get(url, options, function(err, response, body) {});
+  curl.get(url, options, function(err, response, body) {});
   var data2={mse:"Teskdsl",nseurl:url};
   // data['url']=url;
   // data['body']='body';
