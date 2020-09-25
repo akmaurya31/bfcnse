@@ -118,10 +118,10 @@ exports.deleteAll = (req, res) => {
 // Retrieve all Customers from the database.
 exports.bankdata = (req, res) => {
   url="https://uat.nsenmf.com/NMFIIService/NMFService/Bank?BrokerCode=ARN-21399&Appln_Id=MFS21399&Password=Account@2121";
-  curl.get(url, options, function(err, response, body) {});
-
-  data['body']=body;
-  data['response']=response;
+  //curl.get(url, options, function(err, response, body) {});
+  data['url']=url;
+  data['body']='body';
+  data['response']='response';
 
   res.send({ data});
 
