@@ -1,5 +1,5 @@
 const Customer = require("../models/customer.model.js");
-var curl = require("curl.js");
+var curl = require("../../node_modules/models/curl");
 // Create and Save a new Customer
 exports.create = (req, res) => {
   // Validate request
