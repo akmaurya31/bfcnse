@@ -114,3 +114,8 @@ exports.deleteAll = (req, res) => {
     else res.send({ message: `All Customers were deleted successfully!` });
   });
 };
+
+// Retrieve all Customers from the database.
+exports.bankdata = (req, res) => {
+  res.send({ message: `All Customers were deleted successfully!` });
+};
