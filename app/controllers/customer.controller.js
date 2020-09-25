@@ -1,5 +1,5 @@
 const Customer = require("../models/customer.model.js");
-var curl = require("curl");
+//var curl = require("curl.js");
 // Create and Save a new Customer
 exports.create = (req, res) => {
   // Validate request
@@ -123,7 +123,7 @@ exports.bankdata = (req, res) => {
   data['body']='body';
   data['response']='response';
 
-  res.send({ data});
+  res.send({ message: `All Customers were deleted successfully!` });
 
 
 };
