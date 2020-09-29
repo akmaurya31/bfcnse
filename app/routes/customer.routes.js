@@ -21,5 +21,8 @@ module.exports = app => {
 
   // Retrieve all Customers
   app.get("/Bank", customers.bankdata);
-  app.get("/dhr", customers.dhr);
+
+    // Retrieve all Customers
+    app.get("/getUsers", customers.getusers);
+
 };

@@ -53,20 +53,18 @@ Customer.getAll = result => {
 };
 
 
-Customer.getAlldd = result => {
+Customer.getAllusers = result => {
   sql.query("SELECT * FROM users", (err, res) => {
     if (err) {
-      console.log("errorddd: ", err);
+      console.log("error: ", err);
       result(null, err);
       return;
     }
 
-    console.log("customersdd: ", res);
+    console.log("users: ", res);
     result(null, res);
   });
 };
-
-
 
 
 Customer.updateById = (id, customer, result) => {
