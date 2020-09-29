@@ -57,7 +57,7 @@ exports.findOne = (req, res) => {
 };
 
 exports.findOne1users = (req, res) => {
-  Customer.findById(req.params.emailId, (err, data) => {
+  Customer.findByIdusers(req.params.emailId, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
