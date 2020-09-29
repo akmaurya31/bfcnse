@@ -41,7 +41,7 @@ Customer.findById = (customerId, result) => {
   
 Customer.findByIdusers = (customerId, result) => {
   console.log("sdfsdfsdf1111111");
-  var hdh="SELECT * FROM users WHERE email ="+`${customerId}`;
+  var hdh="SELECT * FROM users WHERE email ='"+`${customerId}`+"'";
   console.log(hdh);
   sql.query(hdh, (err, res) => {
     if (err) {
