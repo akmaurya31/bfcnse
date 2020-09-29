@@ -56,6 +56,22 @@ exports.findOne = (req, res) => {
   });
 };
 
+exports.findOne1users = (req, res) => {
+  Customer.findById(req.params.emailId, (err, data) => {
+    if (err) {
+      if (err.kind === "not_found") {
+        res.status(404).send({
+          message: `Not found Customer with id ${req.params.emailId}.`
+        });
+      } else {
+        res.status(500).send({
+          message: "Error retrieving Customer with id " + req.params.emailId
+        });
+      }
+    } else res.send(data);
+  });
+};
+
 // Update a Customer identified by the customerId in the request
 exports.update = (req, res) => {
   // Validate Request

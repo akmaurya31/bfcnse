@@ -24,5 +24,7 @@ module.exports = app => {
 
     // Retrieve all Customers
     app.get("/getUsers", customers.getusers);
+    app.get("/customersp/:customerId", customers.findOne);
+    app.get("/users/:emailId", customers.findOne1users);
 
 };
