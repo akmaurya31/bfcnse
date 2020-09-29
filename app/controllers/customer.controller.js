@@ -115,6 +115,36 @@ exports.deleteAll = (req, res) => {
   });
 };
 
+
+exports.dhr = (req, res) => {
+
+  var hhh={ message: `All Customers were deleted successfully!` }
+
+  var kin={kej:'sdfasdf',kadk:'asdfa',hhh};
+
+
+  Customer.getAlldd((err, data) => {
+
+    console.log("asdfasdfs",data);
+
+  });
+
+  // var url="https://uat.nsenmf.com/NMFIIService/NMFService/Bank?BrokerCode=ARN-21399&Appln_Id=MFS21399&Password=Account@2121";
+  //curl.get(url, options, function(err, response, body) {});
+
+  
+  res.send(kin);
+  console.log("sdfa");
+
+
+
+};
+
+
+
+
+
+
 // Retrieve all Customers from the database.
 exports.bankdata = (req, res) => {
   var url="https://uat.nsenmf.com/NMFIIService/NMFService/Bank?BrokerCode=ARN-21399&Appln_Id=MFS21399&Password=Account@2121";

@@ -52,6 +52,23 @@ Customer.getAll = result => {
   });
 };
 
+
+Customer.getAlldd = result => {
+  sql.query("SELECT * FROM users", (err, res) => {
+    if (err) {
+      console.log("errorddd: ", err);
+      result(null, err);
+      return;
+    }
+
+    console.log("customersdd: ", res);
+    result(null, res);
+  });
+};
+
+
+
+
 Customer.updateById = (id, customer, result) => {
   sql.query(
     "UPDATE customers SET email = ?, name = ?, active = ? WHERE id = ?",
