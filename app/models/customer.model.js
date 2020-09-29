@@ -39,6 +39,25 @@ Customer.findById = (customerId, result) => {
   });
 };
 
+Customer.findByIdusers = (customerId, result) => {
+  sql.query(`SELECT * FROM users WHERE email = ${customerId}`, (err, res) => {
+    if (err) {
+      console.log("error: ", err);
+      result(err, null);
+      return;
+    }
+
+    if (res.length) {
+      console.log("found users: ", res[0]);
+      result(null, res[0]);
+      return;
+    }
+
+    // not found Customer with the id
+    result({ kind: "not_found" }, null);
+  });
+};
+
 Customer.getAll = result => {
   sql.query("SELECT * FROM customers", (err, res) => {
     if (err) {
