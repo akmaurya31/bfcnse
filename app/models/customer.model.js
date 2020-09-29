@@ -38,9 +38,12 @@ Customer.findById = (customerId, result) => {
     result({ kind: "not_found" }, null);
   });
 };
-
+  
 Customer.findByIdusers = (customerId, result) => {
-  sql.query(`SELECT * FROM users WHERE email = ${customerId}`, (err, res) => {
+  console.log("sdfsdfsdf1111111");
+  var hdh="SELECT * FROM users WHERE email ="+`${customerId}`;
+  console.log(hdh);
+  sql.query(hdh, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
